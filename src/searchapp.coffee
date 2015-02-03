@@ -1,7 +1,5 @@
-#console.log React
-
-React = if @React then @React else require 'react'
-_ = if @_ then @_ else require 'lodash'
+React = @React or require 'react'
+_ = @_ or require 'lodash'
 
 ajax = (method, url, callback) ->
   request = new XMLHttpRequest()
@@ -123,7 +121,7 @@ components.PaginateFooter = React.createClass
       else
         h.a href: '#', onClick: (-> p.onClickPage p.currentPage+1), "Next >"
 
-factories = _.mapValues components, (component) -> React.createFactory component
+factories = _.mapValues components, React.createFactory 
 
 if module?
   module.exports = factories.SearchApp

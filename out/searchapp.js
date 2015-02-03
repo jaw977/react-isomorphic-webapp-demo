@@ -1,9 +1,9 @@
 (function() {
   var React, ajax, components, factories, _;
 
-  React = this.React ? this.React : require('react');
+  React = this.React || require('react');
 
-  _ = this._ ? this._ : require('lodash');
+  _ = this._ || require('lodash');
 
   ajax = function(method, url, callback) {
     var request;
@@ -257,9 +257,7 @@
     }
   });
 
-  factories = _.mapValues(components, function(component) {
-    return React.createFactory(component);
-  });
+  factories = _.mapValues(components, React.createFactory);
 
   if (typeof module !== "undefined" && module !== null) {
     module.exports = factories.SearchApp;
