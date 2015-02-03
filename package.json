@@ -1,0 +1,22 @@
+{
+  "name": "react-isomorphic-webapp-demo",
+  "version": "0.0.1",
+  "description": "Sample React webapp which renders both on the client and server",
+  "license": "MIT",
+  "author": "Jason Waag <jaw977@yahoo.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jaw977/react-isomorphic-webapp-demo.git"
+  },
+  "dependencies": {
+    "express": "4.11.2",
+    "lodash": "2.4.1",
+    "react": "0.12.2"
+  },
+  "devDependencies": {
+    "coffee-script": "1.9.0",
+    "gulp": "3.8.10",
+    "gulp-coffee": "2.3.1",
+    "gulp-plumber": "0.6.6"
+  }
+}
